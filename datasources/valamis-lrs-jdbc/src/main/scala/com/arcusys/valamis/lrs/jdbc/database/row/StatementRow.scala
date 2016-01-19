@@ -1,8 +1,9 @@
 package com.arcusys.valamis.lrs.jdbc.database.row
 
 import java.util.UUID
-import com.arcusys.valamis.lrs.tincan.{LanguageMap, TincanVersion}
+import com.arcusys.valamis.lrs.tincan.LanguageMap
 import org.joda.time.DateTime
+import org.openlrs.xapi.TincanVersion
 
 /**
  * Created by igorborisov on 12.01.15.

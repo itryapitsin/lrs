@@ -8,6 +8,7 @@ import com.arcusys.valamis.lrs.jdbc.database.api.query.DocumentQueries
 import com.arcusys.valamis.lrs.jdbc.database.row._
 import com.arcusys.valamis.lrs.tincan._
 import org.joda.time.DateTime
+import org.openlrs.xapi.{ContentType, Agent, Activity, Document}
 
 /**
  * Created by Iliya Tryapitsin on 09.07.15.
@@ -112,7 +113,7 @@ trait DocumentApi extends DocumentQueries
   }
 
   /**
-   * Delete Tincan [[com.arcusys.valamis.lrs.tincan.Document]] from a storage
+   * Delete Tincan [[Document]] from a storage
    * @param actorKey Actor storage key
    * @param profileId Tincan ProfileId
    * @param session

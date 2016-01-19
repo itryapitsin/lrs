@@ -4,13 +4,15 @@ import java.net.URI
 import java.util.UUID
 
 import com.arcusys.valamis.lrs._
-import com.arcusys.valamis.lrs.exception.ConflictEntityException
 import com.arcusys.valamis.lrs.jdbc.Loggable
 import com.arcusys.valamis.lrs.jdbc.database.LrsDataContext
 import com.arcusys.valamis.lrs.jdbc.database.api.query.{StatementQueries, TypeAliases}
 import com.arcusys.valamis.lrs.jdbc.database.row.StatementRow
 import com.arcusys.valamis.lrs.tincan._
 import org.joda.time.DateTime
+import org.openlrs.exception.ConflictEntityException
+import org.openlrs.xapi.{Statement, Constants, Actor}
+import org.openlrs.{StatementQuery, PartialSeq}
 
 import scala.async.Async
 import scala.async.Async.async

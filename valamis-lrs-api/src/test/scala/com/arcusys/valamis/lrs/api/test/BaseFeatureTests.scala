@@ -3,8 +3,8 @@ package com.arcusys.valamis.lrs.api.test
 import javax.xml.bind.DatatypeConverter
 
 import com.arcusys.valamis.lrs.api.{LrsAuthOAuthSettings, LrsAuthBasicSettings, LrsSettings}
-import com.arcusys.valamis.lrs.tincan.TincanVersion
 import org.apache.http.client.utils.URIBuilder
+import org.openlrs.xapi.TincanVersion
 
 /**
  * Created by Iliya Tryapitsin on 13/02/15.

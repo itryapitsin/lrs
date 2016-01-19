@@ -1,10 +1,11 @@
 package com.arcusys.valamis.lrs.api
 
-import com.arcusys.valamis.lrs.serializer.ActivitySerializer
-import com.arcusys.valamis.lrs.tincan.{Activity, Constants}
+import com.arcusys.valamis.lrs.tincan.Constants
 import org.apache.http.util.EntityUtils
 import org.apache.http.{HttpStatus, HttpHeaders}
 import org.apache.http.client.methods.HttpGet
+import org.openlrs.serializer.ActivitySerializer
+import org.openlrs.xapi.{Constants, Activity}
 
 import scala.util._
 

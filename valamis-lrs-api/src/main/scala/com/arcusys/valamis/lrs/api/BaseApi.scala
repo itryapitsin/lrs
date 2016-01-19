@@ -1,7 +1,6 @@
 package com.arcusys.valamis.lrs.api
 
 import java.io.InputStream
-import com.arcusys.valamis.lrs.tincan.Constants
 import org.apache.http.{HttpStatus, HttpHeaders}
 import org.apache.http.client.methods.{CloseableHttpResponse, HttpRequestBase}
 import org.apache.http.client.utils.URIBuilder
@@ -9,6 +8,7 @@ import org.apache.http.entity.ContentType
 import org.apache.http.impl.client.HttpClients
 import org.json4s._
 import org.json4s.jackson.JsonMethods._
+import org.openlrs.xapi.Constants
 import scala.io.Source
 import scala.util.{Try, Failure, Success}
 

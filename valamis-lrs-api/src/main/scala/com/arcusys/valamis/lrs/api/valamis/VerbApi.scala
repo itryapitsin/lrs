@@ -1,12 +1,14 @@
 package com.arcusys.valamis.lrs.api.valamis
 
-import com.arcusys.valamis.lrs.{SeqWithCount}
 import com.arcusys.valamis.lrs.api.{BaseApi, LrsSettings}
-import com.arcusys.valamis.lrs.serializer.DateTimeSerializer
-import com.arcusys.valamis.lrs.tincan.{LanguageMap, Verb}
-import com.arcusys.valamis.lrs.tincan.valamis.{ActivityIdLanguageMap,VerbStatistics}
+import com.arcusys.valamis.lrs.tincan.LanguageMap
+import com.arcusys.valamis.lrs.tincan.valamis.VerbStatistics
 import org.apache.http.client.methods.HttpGet
 import org.joda.time.DateTime
+import org.openlrs.SeqWithCount
+import org.openlrs.serializer.DateTimeSerializer
+import org.openlrs.xapi.Verb
+import org.openlrs.xapi.valamis.{VerbStatistics, ActivityIdLanguageMap}
 
 import scala.util.Try
 

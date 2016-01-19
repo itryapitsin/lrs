@@ -13,7 +13,7 @@ object Tasks {
     println("Sql queries generation ...")
 
     val loader: ClassLoader = ClasspathUtilities.toLoader(classpath.map(_.data).map(_.getAbsoluteFile))
-    val clss = loader.loadClass("com.arcusys.valamis.lrs.liferay.util.SqlAccessGenerator")
+    val clss = loader.loadClass("org.openlrs.liferay.util.SqlAccessGenerator")
     clss.getMethod("sqlStatements").invoke(clss.newInstance())
   }
 
@@ -21,7 +21,7 @@ object Tasks {
     println("Sql tables generation ...")
 
     val loader: ClassLoader = ClasspathUtilities.toLoader(classpath.map(_.data).map(_.getAbsoluteFile))
-    val clss = loader.loadClass("com.arcusys.valamis.lrs.liferay.util.SqlAccessGenerator")
+    val clss = loader.loadClass("org.openlrs.liferay.util.SqlAccessGenerator")
     clss.getMethod("sqlTables").invoke(clss.newInstance())
   }
 

@@ -9,14 +9,14 @@ lazy val `valamis-lrs-spark` = (project in file("datasources/valamis-lrs-spark")
   .settings(
     name := "valamis-lrs-spark",
     libraryDependencies ++= Dependencies.spark,
-    mappings in(Compile, packageBin) ++= mappings.in(`valamis-lrs-tincan`, Compile, packageBin).value,
-    mappings in(Compile, packageBin) ++= mappings.in(`valamis-lrs-util`,   Compile, packageBin).value
+    mappings in(Compile, packageBin) ++= mappings.in(`openlrs-xapi`, Compile, packageBin).value,
+    mappings in(Compile, packageBin) ++= mappings.in(`openlrs-util`,   Compile, packageBin).value
   )
   .dependsOn(
-    `valamis-lrs-util`,
-    `valamis-lrs-tincan`,
+    `openlrs-util`,
+    `openlrs-xapi`,
     `valamis-lrs-jdbc`,
-    `valamis-lrs-test` % Test
+    `openlrs-test` % Test
   )
 
 lazy val `valamis-lrs-jdbc` = (project in file("datasources/valamis-lrs-jdbc"))
@@ -25,13 +25,13 @@ lazy val `valamis-lrs-jdbc` = (project in file("datasources/valamis-lrs-jdbc"))
   .settings(
     name := "valamis-lrs-jdbc",
     libraryDependencies ++= Dependencies.database,
-    mappings in(Compile, packageBin) ++= mappings.in(`valamis-lrs-tincan`, Compile, packageBin).value,
-    mappings in(Compile, packageBin) ++= mappings.in(`valamis-lrs-util`,   Compile, packageBin).value
+    mappings in(Compile, packageBin) ++= mappings.in(`openlrs-xapi`, Compile, packageBin).value,
+    mappings in(Compile, packageBin) ++= mappings.in(`openlrs-util`,   Compile, packageBin).value
   )
   .dependsOn(
-    `valamis-lrs-util`,
-    `valamis-lrs-tincan`,
-    `valamis-lrs-test` % Test
+    `openlrs-util`,
+    `openlrs-xapi`,
+    `openlrs-test` % Test
   )
 
 //lazy val `valamis-lrs-cassandra` = (project in file("datasources/valamis-lrs-cassandra"))
@@ -46,11 +46,11 @@ lazy val `valamis-lrs-jdbc` = (project in file("datasources/valamis-lrs-jdbc"))
 //    `valamis-lrs-tincan`
 //  )
 
-lazy val `valamis-lrs-liferay` = (project in file("valamis-lrs-liferay"))
+lazy val `openlrs-liferay` = (project in file("openlrs-liferay"))
   .settings(commonSettings: _*)
   .settings(publishToNexusSettings: _*)
   .settings(
-    name := "valamis-lrs-liferay",
+    name := "openlrs-liferay",
     publishMavenStyle :=  true,
     sqlStatementsTask <<= sqlStatementsGeneration,
     sqlTablesTask     <<= sqlTablesGeneration,
@@ -62,11 +62,10 @@ lazy val `valamis-lrs-liferay` = (project in file("valamis-lrs-liferay"))
     artifactName in packageWar := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>  "valamis-lrs-portlet." + artifact.extension }
   )
   .dependsOn(
-    `valamis-lrs-util`,
-    `valamis-lrs-tincan`,
-    `valamis-lrs-protocol`,
+    `openlrs-util`,
+    `openlrs-xapi`,
     `valamis-lrs-api`  % Test,
-    `valamis-lrs-test` % Test,
+    `openlrs-test` % Test,
     `valamis-lrs-jdbc`,
     `valamis-lrs-spark`
   )
@@ -77,8 +76,8 @@ lazy val `valamis-lrs-api` = (project in file("valamis-lrs-api"))
   .settings(publishToNexusSettings: _*)
   .settings(
     mappings in(Compile, packageBin) ++=
-      mappings.in(`valamis-lrs-tincan`, Compile, packageBin).value ++
-      mappings.in(`valamis-lrs-util`,   Compile, packageBin).value,
+      mappings.in(`openlrs-xapi`, Compile, packageBin).value ++
+      mappings.in(`openlrs-util`,   Compile, packageBin).value,
     name := "valamis-lrs-api",
     libraryDependencies ++= Dependencies.api ++ Dependencies.tincan,
     publishMavenStyle := true,
@@ -87,59 +86,47 @@ lazy val `valamis-lrs-api` = (project in file("valamis-lrs-api"))
     )
   )
   .dependsOn(
-    `valamis-lrs-tincan`
+    `openlrs-xapi`
   )
 
 // === Additional project definitions
-lazy val `valamis-lrs-tincan` = (project in file("valamis-lrs-tincan"))
+lazy val `openlrs-xapi` = (project in file("openlrs-xapi"))
   .settings(commonSettings: _*)
   .settings(disablePublishSettings: _*)
   .settings(
-    name := "valamis-lrs-tincan",
+    name := "openlrs-xapi",
     libraryDependencies ++= Dependencies.tincan
   )
   .dependsOn(
-    `valamis-lrs-util`,
-    `valamis-lrs-test` % Test
+    `openlrs-util`,
+    `openlrs-test` % Test
   )
 
-lazy val `valamis-lrs-protocol` = (project in file("valamis-lrs-protocol"))
+lazy val `openlrs-util` = (project in file("openlrs-util"))
   .settings(commonSettings: _*)
   .settings(disablePublishSettings: _*)
   .settings(
-    name := "valamis-lrs-protocol"
-  )
-  .dependsOn(
-    `valamis-lrs-util`,
-    `valamis-lrs-tincan`,
-    `valamis-lrs-test` % Test
+    name := "openlrs-util"
   )
 
-lazy val `valamis-lrs-util` = (project in file("valamis-lrs-util"))
+lazy val `openlrs-test` = (project in file("openlrs-test"))
   .settings(commonSettings: _*)
   .settings(disablePublishSettings: _*)
   .settings(
-    name := "valamis-lrs-util"
-  )
-
-lazy val `valamis-lrs-test` = (project in file("valamis-lrs-test"))
-  .settings(commonSettings: _*)
-  .settings(disablePublishSettings: _*)
-  .settings(
-    name := "valamis-lrs-test",
+    name := "openlrs-test",
     libraryDependencies ++= (Dependencies.database ++ Dependencies.testCluster)
   )
-  .dependsOn(`valamis-lrs-util`)
+  .dependsOn(`openlrs-util`)
 
-lazy val `valamis-lrs` = (project in file("."))
+lazy val `openlrs` = (project in file("."))
   .settings(commonSettings: _*)
   .settings(disablePublishSettings: _*)
-  .settings(name := "valamis-lrs")
+  .settings(name := "openlrs")
   .aggregate(
-    `valamis-lrs-liferay`,
-    `valamis-lrs-tincan`,
+    `openlrs-liferay`,
+    `openlrs-xapi`,
     `valamis-lrs-jdbc`,
-    `valamis-lrs-test`,
-    `valamis-lrs-util`,
+    `openlrs-test`,
+    `openlrs-util`,
     `valamis-lrs-api`
   )

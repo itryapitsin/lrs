@@ -1,6 +1,7 @@
 package com.arcusys.valamis.lrs.jdbc.database.row
 
-import com.arcusys.valamis.lrs.tincan.StatementObjectType.Type
+import org.openlrs.xapi.StatementObjectType
+import StatementObjectType.Type
 
 /**
  * Created by igorborisov on 15.01.15.

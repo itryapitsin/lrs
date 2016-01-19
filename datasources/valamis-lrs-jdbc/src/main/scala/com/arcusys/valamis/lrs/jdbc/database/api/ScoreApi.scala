@@ -3,7 +3,7 @@ package com.arcusys.valamis.lrs.jdbc.database.api
 import com.arcusys.valamis.lrs.jdbc.database.LrsDataContext
 import com.arcusys.valamis.lrs.jdbc.database.api.query.ScoreQueries
 import com.arcusys.valamis.lrs.jdbc.database.row.ScoreRow
-import com.arcusys.valamis.lrs.tincan.Score
+import org.openlrs.xapi.Score
 
 /**
  * Created by Iliya Tryapitsin on 08.07.15.

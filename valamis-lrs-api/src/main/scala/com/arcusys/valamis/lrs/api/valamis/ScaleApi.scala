@@ -3,8 +3,8 @@ package com.arcusys.valamis.lrs.api.valamis
 import java.net.URI
 
 import com.arcusys.valamis.lrs.api.{BaseApi, LrsSettings}
-import com.arcusys.valamis.lrs.tincan.Activity
 import org.apache.http.client.methods.HttpGet
+import org.openlrs.xapi.Activity
 
 import scala.util.Try
 

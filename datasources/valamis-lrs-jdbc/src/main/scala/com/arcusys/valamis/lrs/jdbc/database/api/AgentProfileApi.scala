@@ -5,7 +5,8 @@ import java.util.UUID
 import com.arcusys.valamis.lrs.jdbc.database.LrsDataContext
 import com.arcusys.valamis.lrs.jdbc.database.api.query._
 import com.arcusys.valamis.lrs.jdbc.database.row._
-import com.arcusys.valamis.lrs.tincan.{Document, Agent, Activity}
+import com.arcusys.valamis.lrs.tincan.Document
+import org.openlrs.xapi.{Activity, AgentProfile}
 
 /**
  * Created by Iliya Tryapitsin on 09.07.15.
@@ -18,7 +19,7 @@ trait AgentProfileApi extends AgentProfileQueries {
   import driver.simple._
 
   /**
-   * Delete Tincan [[com.arcusys.valamis.lrs.tincan.AgentProfile]] from a storage
+   * Delete Tincan [[AgentProfile]] from a storage
    * @param actorKey Actor storage key
    * @param profileId Tincan ProfileId
    * @param session
@@ -30,11 +31,11 @@ trait AgentProfileApi extends AgentProfileQueries {
     findAgentProfilesByActorAndProfileIdQC (actorKey, profileId) delete
   }
 
-  /**
-    * Get the specified profile document in the context of the specified Agent.
-    * @param agent The Agent associated with this profile.
-    * @param profileId The profile id associated with this profile.
-    */
+//  /**
+//    * Get the specified profile document in the context of the specified Agent.
+//    * @param agent The Agent associated with this profile.
+//    * @param profileId The profile id associated with this profile.
+//    */
 //  def getProfileContent(agent:     Agent,
 //                        profileId: String): Option[Document] = db.withSession { implicit session =>
 //    actors keyFor agent match {

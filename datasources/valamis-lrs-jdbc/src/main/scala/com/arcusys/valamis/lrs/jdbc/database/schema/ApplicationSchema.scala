@@ -3,9 +3,9 @@ package com.arcusys.valamis.lrs.jdbc.database.schema
 import com.arcusys.valamis.lrs.jdbc.database.row.ApplicationRow
 import com.arcusys.valamis.lrs.jdbc.database._
 import com.arcusys.valamis.lrs.jdbc.database.utils.DbNameUtils._
-import com.arcusys.valamis.lrs.security.AuthenticationType
-import com.arcusys.valamis.lrs.tincan.AuthorizationScope
 import org.joda.time.DateTime
+import org.openlrs.security.AuthenticationType
+import org.openlrs.xapi.AuthorizationScope
 
 import scala.slick.driver.JdbcDriver
 import scala.slick.jdbc.JdbcBackend

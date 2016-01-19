@@ -6,7 +6,8 @@ import com.arcusys.valamis.lrs.jdbc.database.row.SubStatementRow
 import com.arcusys.valamis.lrs.jdbc.database.LrsDataContext
 import com.arcusys.valamis.lrs.jdbc.database.api.query.SubStatementQueries
 import com.arcusys.valamis.lrs.jdbc.database.row.{ActorRow, SubStatementRow}
-import com.arcusys.valamis.lrs.tincan.{Actor, SubStatement}
+import com.arcusys.valamis.lrs.tincan.SubStatement
+import org.openlrs.xapi.{SubStatement, Actor}
 
 import scala.async.Async
 import scala.concurrent.Await

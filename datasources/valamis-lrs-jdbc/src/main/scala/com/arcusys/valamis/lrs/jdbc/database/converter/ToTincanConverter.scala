@@ -7,6 +7,7 @@ import com.arcusys.valamis.lrs.jdbc.database.row._
 import com.arcusys.valamis.lrs.jdbc.database.schema.AccountSchema
 import com.arcusys.valamis.lrs.tincan._
 import com.arcusys.valamis.lrs._
+import org.openlrs.xapi._
 
 /**
  * Created by Iliya Tryapitsin on 30.06.15.

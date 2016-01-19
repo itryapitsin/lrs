@@ -5,6 +5,7 @@
 package com.arcusys.valamis.lrs.jdbc.database.row
 
 import com.arcusys.valamis.lrs.tincan._
+import org.openlrs.xapi.{InteractionType, InteractionComponent}
 
 case class ActivityRow(key: StatementObjectRow#Type,
                        id: String,

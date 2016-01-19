@@ -4,9 +4,10 @@ import com.arcusys.valamis.lrs.jdbc.database.LrsDataContext
 import com.arcusys.valamis.lrs.jdbc.database.utils.DbNameUtils
 import DbNameUtils._
 import com.arcusys.valamis.lrs.jdbc.database.row.DocumentRow
-import com.arcusys.valamis.lrs.tincan.ContentType._
+import org.openlrs.xapi.ContentType
+import ContentType._
 import org.joda.time.DateTime
-import com.arcusys.valamis.lrs.tincan.ContentType.{Type => CntType}
+import ContentType.{Type => CntType}
 
 /**
  * Created by Iliya Tryapitsin on 23.07.15.

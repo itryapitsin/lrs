@@ -1,7 +1,8 @@
 package com.arcusys.valamis.lrs.jdbc.database.row
 
 import java.util.UUID
-import com.arcusys.valamis.lrs.tincan.StatementReference
+
+import org.openlrs.xapi.StatementReference
 
 /**
  * Created by igorborisov on 12.01.15.

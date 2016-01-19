@@ -2,11 +2,13 @@ package com.arcusys.valamis.lrs.jdbc
 
 import java.util.UUID
 
-import com.arcusys.valamis.lrs.{PartialSeq, _}
+import com.arcusys.valamis.lrs.{_}
 import com.arcusys.valamis.lrs.jdbc.database.LrsDataContext
 import com.arcusys.valamis.lrs.jdbc.database.api._
 import com.arcusys.valamis.lrs.tincan._
 import org.joda.time.DateTime
+import org.openlrs.xapi.{Statement, Document, Agent, Activity}
+import org.openlrs.{StatementQuery, PartialSeq}
 
 import scala.concurrent.Await
 
@@ -40,6 +42,7 @@ trait JdbcLrs
    * If the statementId or voidedStatementId parameter is specified a single [[Statement]] is returned.
    * @return
    */
+  @deprecated
   def findStatements (query: StatementQuery): PartialSeq[Statement] =
     db withSession { implicit session =>
 
@@ -55,6 +58,7 @@ trait JdbcLrs
    * @param agent The [[Agent]] associated with this profile.
    * @param profileId The profile id associated with this profile.
    */
+  @deprecated
   def deleteProfile (agent:     Agent,
                      profileId: String): Unit =
     db withSession { implicit session =>
@@ -64,6 +68,7 @@ trait JdbcLrs
       }
     }
 
+  @deprecated
   def deleteProfile(agent:        Agent,
                     activityId:   Activity#Id,
                     stateId:      String,
@@ -77,6 +82,7 @@ trait JdbcLrs
       }
     }
 
+  @deprecated
   def deleteProfiles(agent: Agent,
                      activityId: String,
                      registration: Option[UUID]): Unit = db.withSession { implicit session =>
@@ -95,6 +101,7 @@ trait JdbcLrs
    * @param activityId The activity id associated with these profiles.
    * @param profileId The profile id associated with this profile.
    */
+  @deprecated
   def deleteActivityProfile (activityId: String,
                              profileId:  String): Unit =
     db withSession { implicit session =>
@@ -106,6 +113,7 @@ trait JdbcLrs
    * @param activityId The id associated with the Activities to load. (IRI)
    * @return [[Activity]] if found or [[None]]
    */
+  @deprecated
   def getActivity (activityId: String): Option[Activity] =
     db withSession { implicit session =>
       findActivityById (activityId)
@@ -116,6 +124,7 @@ trait JdbcLrs
    * @param activity The filter name.
    * @return List of [[Activity]]
    */
+  @deprecated
   def getActivities (activity: String): Seq[Activity] =
     db withSession { implicit session =>
       activities filterByName activity
@@ -130,6 +139,7 @@ trait JdbcLrs
    * @param registration The registration id associated with this state.
    * @return State Content
    */
+  @deprecated
   def getDocument(agent:        Agent,
                   activityId:   String,
                   stateId:      String,
@@ -147,6 +157,7 @@ trait JdbcLrs
    * @param profileId The profile id associated with this profile.
    * @return [[Document]] or [[None]] if not found
    */
+  @deprecated
   def getDocument(activityId: Activity#Id,
                   profileId:  ProfileId): Option[Document] =
     db withSession { implicit session =>
@@ -163,6 +174,7 @@ trait JdbcLrs
    * @param since Only ids of states stored since the specified timestamp (exclusive) are returned.
    * @return List of ids
    */
+  @deprecated
   def getDocuments(agent:        Agent,
                    activityId:   Activity#Id,
                    registration: Option[UUID],
@@ -182,6 +194,7 @@ trait JdbcLrs
    * @param since Only ids of profiles stored since the specified timestamp (exclusive) are returned.
    * @return List of profile ids
    */
+  @deprecated
   def getProfileIds(activityId: Activity#Id,
                     since:      Option[DateTime] = None): Seq[ProfileId] =
     db withSession { implicit session =>

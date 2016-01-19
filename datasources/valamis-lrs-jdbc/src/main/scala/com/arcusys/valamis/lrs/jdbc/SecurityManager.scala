@@ -5,9 +5,10 @@ import java.util.UUID
 import com.arcusys.valamis.lrs._
 import com.arcusys.valamis.lrs.jdbc.database.SecurityDataContext
 import com.arcusys.valamis.lrs.jdbc.database.row.{ApplicationRow, TokenRow}
-import com.arcusys.valamis.lrs.security.{AuthenticationStatus, AuthenticationType}
-import com.arcusys.valamis.lrs.tincan.AuthorizationScope
+import com.arcusys.valamis.lrs.security.AuthenticationType
 import org.joda.time.DateTime
+import org.openlrs.security.{AuthenticationType, AuthenticationStatus}
+import org.openlrs.xapi.AuthorizationScope
 
 /**
  * Created by Iliya Tryapitsin on 23.07.15.

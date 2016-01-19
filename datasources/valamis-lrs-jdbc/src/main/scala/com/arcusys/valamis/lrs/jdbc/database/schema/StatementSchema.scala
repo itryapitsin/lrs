@@ -6,6 +6,7 @@ import DbNameUtils._
 import com.arcusys.valamis.lrs.jdbc.database.row._
 import com.arcusys.valamis.lrs.tincan._
 import org.joda.time.DateTime
+import org.openlrs.xapi.TincanVersion
 
 /**
  * Created by Iliya Tryapitsin on 23.07.15.

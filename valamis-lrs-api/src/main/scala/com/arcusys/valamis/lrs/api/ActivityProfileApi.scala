@@ -2,15 +2,15 @@ package com.arcusys.valamis.lrs.api
 
 import java.io.InputStream
 import java.util.UUID
-
-import com.arcusys.valamis.lrs.serializer.ActivitySerializer
-import com.arcusys.valamis.lrs.tincan.{Activity, Constants}
+import com.arcusys.valamis.lrs.tincan.Constants
 import org.apache.http.client.entity.EntityBuilder
 import org.apache.http.client.methods.{HttpDelete, HttpGet, HttpPut}
 import org.apache.http.entity.ContentType
 import org.apache.http.util.EntityUtils
 import org.apache.http.{HttpHeaders, HttpStatus}
 import org.joda.time.DateTime
+import org.openlrs.serializer.ActivitySerializer
+import org.openlrs.xapi.Constants
 
 import scala.util.{Failure, Success, Try}
 

@@ -8,7 +8,7 @@ import com.arcusys.valamis.lrs.jdbc.database.row.StatementReferenceRow
 import com.arcusys.valamis.lrs.jdbc.database.LrsDataContext
 import com.arcusys.valamis.lrs.jdbc.database.api.query.StatementRefQueries
 import com.arcusys.valamis.lrs.jdbc.database.row.StatementReferenceRow
-import com.arcusys.valamis.lrs.tincan.StatementReference
+import org.openlrs.xapi.StatementReference
 
 /**
  * LRS component for a Tincan [[StatementReference]]

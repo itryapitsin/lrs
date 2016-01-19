@@ -6,6 +6,7 @@ import com.arcusys.valamis.lrs.jdbc.database.LrsDataContext
 import com.arcusys.valamis.lrs.jdbc.database.api.query.ResultQueries
 import com.arcusys.valamis.lrs.jdbc.database.row.ResultRow
 import com.arcusys.valamis.lrs.tincan._
+import org.openlrs.xapi.{Score, Result}
 
 /**
  * Created by Iliya Tryapitsin on 08.07.15.

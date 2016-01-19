@@ -8,6 +8,7 @@ import com.arcusys.valamis.lrs.jdbc.database.schema.AgentProfileSchema
 import com.arcusys.valamis.lrs.tincan._
 import com.arcusys.valamis.lrs._
 import org.joda.time.DateTime
+import org.openlrs.xapi.{Document, ContentType, Agent}
 
 @deprecated
 trait AgentComponent {
@@ -66,6 +67,7 @@ trait AgentComponent {
    * @param since Only ids of profiles stored since the specified timestamp (exclusive) are returned.
    * @return Lis of ids
    */
+  @deprecated
   def getProfiles(agent: Agent,
                   since: Option[DateTime] = None): Seq[String] = db.withSession { implicit session =>
     actors keyFor agent match {
@@ -79,6 +81,7 @@ trait AgentComponent {
    * @param agent The Agent associated with this profile.
    * @param profileId The profile id associated with this profile.
    */
+  @deprecated
   def getProfileContent(agent:     Agent,
                         profileId: String): Option[Document] = db.withSession { implicit session =>
     actors keyFor agent match {

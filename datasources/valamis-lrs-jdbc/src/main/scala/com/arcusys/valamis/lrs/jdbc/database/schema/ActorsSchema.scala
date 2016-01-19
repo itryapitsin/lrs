@@ -4,7 +4,6 @@ import com.arcusys.valamis.lrs.jdbc.database.LrsDataContext
 import com.arcusys.valamis.lrs.jdbc.database.utils.DbNameUtils
 import DbNameUtils._
 import com.arcusys.valamis.lrs.jdbc.database.row._
-import com.arcusys.valamis.lrs.tincan.{Constants => C}
 
 import scala.slick.lifted.ProvenShape
 

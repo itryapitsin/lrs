@@ -5,6 +5,7 @@ import com.arcusys.valamis.lrs.jdbc.database.utils.DbNameUtils
 import DbNameUtils._
 import com.arcusys.valamis.lrs.jdbc.database.row.ActivityRow
 import com.arcusys.valamis.lrs.tincan._
+import org.openlrs.xapi.{InteractionType, InteractionComponent}
 
 /**
  * Created by Iliya Tryapitsin on 22.07.15.

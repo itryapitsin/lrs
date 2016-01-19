@@ -6,6 +6,7 @@ import com.arcusys.valamis.lrs.jdbc.database.LrsDataContext
 import com.arcusys.valamis.lrs.jdbc.database.api.query.StatementObjectQueries
 import com.arcusys.valamis.lrs.jdbc.database.row.StatementObjectRow
 import com.arcusys.valamis.lrs.tincan._
+import org.openlrs.xapi._
 import scala.concurrent._
 import scala.async.Async.async
 

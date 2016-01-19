@@ -5,8 +5,8 @@ object Settings {
   val graphSettings = net.virtualvoid.sbt.graph.Plugin.graphSettings
 
   val commonSettings = Seq(
-    organization := "com.arcusys.valamis",
-    version := "2.6-SNAPSHOT",
+    organization := "org.openlrs",
+    version := "1.0-SNAPSHOT",
     scalaVersion := Version.scala,
     crossScalaVersions := Seq(Version.scala, "2.10.5"),
     parallelExecution in Test := false,

@@ -4,7 +4,8 @@ import com.arcusys.valamis.lrs.jdbc.database.LrsDataContext
 import com.arcusys.valamis.lrs.jdbc.database.utils.DbNameUtils
 import DbNameUtils._
 import com.arcusys.valamis.lrs.jdbc.database.row.StatementObjectRow
-import com.arcusys.valamis.lrs.tincan.StatementObjectType.{Type => ObjType}
+import org.openlrs.xapi.StatementObjectType
+import StatementObjectType.{Type => ObjType}
 /**
  * Created by Iliya Tryapitsin on 23.07.15.
  */

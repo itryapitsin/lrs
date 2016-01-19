@@ -5,8 +5,8 @@ import java.net.URI
 import com.arcusys.json.JsonHelper
 import com.arcusys.valamis.lrs._
 import com.arcusys.valamis.lrs.api.valamis.{StatementExtApi, ScaleApi}
-import com.arcusys.valamis.lrs.serializer.AgentSerializer
-import com.arcusys.valamis.lrs.tincan.Agent
+import org.openlrs.serializer.AgentSerializer
+import org.openlrs.xapi.Agent
 import org.scalatest.FeatureSpec
 
 import scala.util._

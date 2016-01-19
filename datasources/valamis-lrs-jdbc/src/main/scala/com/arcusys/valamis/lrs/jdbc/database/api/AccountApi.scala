@@ -4,7 +4,7 @@ import com.arcusys.valamis.lrs.jdbc.database.converter._
 import com.arcusys.valamis.lrs.jdbc.database.LrsDataContext
 import com.arcusys.valamis.lrs.jdbc.database.api.query.AccountQueries
 import com.arcusys.valamis.lrs.jdbc.database.row.AccountRow
-import com.arcusys.valamis.lrs.tincan.Account
+import org.openlrs.xapi.Account
 
 /**
  * LRS component for a Tincan [[Account]]

@@ -6,6 +6,7 @@ import com.arcusys.valamis.lrs.jdbc.database.typemap.CustomTypeMapper
 import com.arcusys.valamis.lrs.jdbc.database.typemap.joda.converter.SqlTypeConverter
 import com.arcusys.valamis.lrs.jdbc.database.typemap.joda.{ResultGetter, ParameterSetter}
 import com.arcusys.valamis.lrs.tincan._
+import org.openlrs.xapi.StatementObjectType
 
 import scala.slick.driver.{JdbcDriver, JdbcProfile}
 import scala.slick.jdbc._

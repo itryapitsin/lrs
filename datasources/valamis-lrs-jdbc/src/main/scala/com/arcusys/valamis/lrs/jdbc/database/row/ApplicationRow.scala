@@ -1,8 +1,9 @@
 package com.arcusys.valamis.lrs.jdbc.database.row
 
-import com.arcusys.valamis.lrs.security.AuthenticationType
 import com.arcusys.valamis.lrs.tincan._
 import org.joda.time.DateTime
+import org.openlrs.security.AuthenticationType
+import org.openlrs.xapi.AuthorizationScope
 
 /**
  * Created by Iliya Tryapitsin on 22.04.15.

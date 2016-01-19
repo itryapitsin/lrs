@@ -8,6 +8,7 @@ import com.arcusys.valamis.lrs.jdbc.database.api.query._
 import com.arcusys.valamis.lrs.jdbc.database.LrsDataContext
 import com.arcusys.valamis.lrs.jdbc.database.row.ActivityRow
 import com.arcusys.valamis.lrs.tincan._
+import org.openlrs.xapi.Activity
 
 /**
  * LRS component for a Tincan [[Activity]]

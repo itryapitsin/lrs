@@ -2,13 +2,15 @@ package com.arcusys.valamis.lrs.api
 
 import java.net.URI
 import java.util.UUID
-import com.arcusys.valamis.lrs.serializer.{GroupSerializer, AgentSerializer, StatementSerializer}
+import com.arcusys.valamis.lrs.serializer.StatementSerializer
 import com.arcusys.valamis.lrs.tincan._
 import org.apache.http.HttpStatus
 import org.apache.http.client.entity.EntityBuilder
 import org.apache.http.client.methods.{HttpGet, HttpPost, HttpPut}
 
 import org.joda.time.DateTime
+import org.openlrs.serializer.{StatementSerializer, GroupSerializer, AgentSerializer}
+import org.openlrs.xapi.{StatementResult, Statement, Constants, Actor}
 
 import scala.util.{Failure, Success, Try}
 

@@ -4,8 +4,10 @@ import java.net.URI
 
 import com.arcusys.valamis.lrs.api.{BaseApi, LrsSettings}
 import com.arcusys.valamis.lrs.serializer._
-import com.arcusys.valamis.lrs.tincan.Actor
-import com.arcusys.valamis.lrs.tincan.Constants.Tincan._
+import org.openlrs.serializer.ActorSerializer
+import org.openlrs.xapi.Constants.Tincan.Activity
+import org.openlrs.xapi.{Activity, Constants, Actor}
+import Constants.Tincan._
 import com.arcusys.valamis.lrs.tincan._
 import org.apache.http.client.methods.HttpGet
 import org.joda.time.DateTime

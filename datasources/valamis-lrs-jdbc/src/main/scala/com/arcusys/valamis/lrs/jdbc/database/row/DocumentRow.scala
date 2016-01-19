@@ -1,8 +1,8 @@
 package com.arcusys.valamis.lrs.jdbc.database.row
 
 import java.util.UUID
-import com.arcusys.valamis.lrs.tincan.ContentType.Type
-import com.arcusys.valamis.lrs.tincan.Document
+import org.openlrs.xapi.{Document, ContentType}
+import ContentType.Type
 import org.joda.time.DateTime
 
 /**

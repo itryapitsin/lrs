@@ -8,8 +8,10 @@ import com.arcusys.valamis.lrs.jdbc.database.api._
 import com.arcusys.valamis.lrs.jdbc.database.api.query.TypeAliases
 import com.arcusys.valamis.lrs.jdbc.database.utils._
 import com.arcusys.valamis.lrs.tincan._
-import com.arcusys.valamis.lrs.tincan.valamis.ActivityIdLanguageMap
 import org.joda.time.DateTime
+import org.openlrs.SeqWithCount
+import org.openlrs.xapi.valamis.ActivityIdLanguageMap
+import org.openlrs.xapi.{Verb, Agent, Actor, Activity}
 
 /**
  * Created by Iliya Tryapitsin on 21.07.15.
